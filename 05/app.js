@@ -1,6 +1,8 @@
 let isOrderPaid = false;
 
-// BUG 1: Zastanów się nad typem deklaracji poniższej zmiennej
+// BUG 1: 
+// Zastanów się nad typem deklaracji poniższej zmiennej,
+// zakładamy, że cena nie będzie ulagać zmienie
 let orderTotal = 100;
 
 function processPayment(paymentAmount) {
@@ -10,7 +12,9 @@ function processPayment(paymentAmount) {
         // BUG 2: Próbujemy zaktualizować globalną flagę
         let isOrderPaid = true; 
 
-        // BUG 3: Tworzymy lokalny identyfikator transakcji
+        // BUG 3: 
+        // Tworzymy lokalny identyfikator transakcji,
+        // który ma być ustawiony po przesłaniu odpowiedniej kwoty
         var transactionId = "TXN-999888"; 
         
         // BUG 4: Próbujemy zaktualizować status płatności
